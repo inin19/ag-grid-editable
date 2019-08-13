@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NumberFormatterComponent } from './custom-components/number-formatter.component';
 import { NumericEditorComponent } from './custom-components/numeric-editor.component';
 import { RangeFilterComponent } from './custom-components/range-filter.component';
+import { RxjsByRowComponent } from './rxjs-component-example/rxjs-by-row.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { RangeFilterComponent } from './custom-components/range-filter.component
     NumberFormatterComponent,
     NumericEditorComponent,
     RangeFilterComponent,
+    RxjsByRowComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import { IFilterComp } from 'ag-grid-community';
+import { IFilterComp, IFilterParams, IDoesFilterPassParams } from 'ag-grid-community';
 
 @Component({
   selector: 'app-range-filter',
@@ -20,7 +20,7 @@ export class RangeFilterComponent implements OnInit, AfterViewInit {
 
   params: any;
 
-  agInit(params: any): void {
+  agInit(params: IFilterParams): void {
     console.log('filter component agInit');
     this.params = params;
   }
@@ -47,7 +47,7 @@ export class RangeFilterComponent implements OnInit, AfterViewInit {
     return this.filter !== '';
   }
 
-  doesFilterPass(params) {
+  doesFilterPass(params: IDoesFilterPassParams) {
     const filter = this.filter.split('-');
     const gt = Number(filter[0]);
     const lt = Number(filter[1]);

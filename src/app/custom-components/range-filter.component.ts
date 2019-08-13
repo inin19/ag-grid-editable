@@ -11,7 +11,7 @@ import { IFilterComp, IFilterParams, IDoesFilterPassParams } from 'ag-grid-commu
   `,
   styles: []
 })
-export class RangeFilterComponent implements OnInit, AfterViewInit {
+export class RangeFilterComponent implements IFilterComp, OnInit, AfterViewInit {
   filter = '';
   @ViewChild('i', { static: false }) textInput: ElementRef;
 
@@ -26,9 +26,9 @@ export class RangeFilterComponent implements OnInit, AfterViewInit {
   }
 
 
-  // getGui() {
-
-  // }
+  getGui() {
+    return null;
+  }
 
   onSubmit(event: any) {
     event.preventDefault();

@@ -7,17 +7,24 @@ import { AppComponent } from './app.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NumberFormatterComponent } from './custom-components/number-formatter.component';
-
+import { NumericEditorComponent } from './custom-components/numeric-editor.component';
+import { RangeFilterComponent } from './custom-components/range-filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NumberFormatterComponent
+    NumberFormatterComponent,
+    NumericEditorComponent,
+    RangeFilterComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AgGridModule.withComponents([]),
+    AgGridModule.withComponents([
+      NumberFormatterComponent,
+      NumericEditorComponent,
+      RangeFilterComponent
+    ]),
     BrowserAnimationsModule
 
   ],

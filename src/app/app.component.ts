@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NumberFormatterComponent } from './custom-components/number-formatter.component';
+import { NumericEditorComponent } from './custom-components/numeric-editor.component';
+import { RangeFilterComponent } from './custom-components/range-filter.component';
 
 
 @Component({
@@ -18,12 +20,19 @@ export class AppComponent implements OnInit {
       headerName: 'Price', field: 'price', editable: true,
       /* specify custom cell renderer */
       cellRenderer: 'numberFormatterComponent',
+      cellEditor: 'numericEditorComponent',
+      /* custom filter */
+
+      filter: 'rangeFilterComponent'
 
     }
   ];
 
   frameworkComponents = {
     numberFormatterComponent: NumberFormatterComponent,
+    numericEditorComponent: NumericEditorComponent,
+    rangeFilterComponent: RangeFilterComponent,
+
   };
 
   rowData: any;

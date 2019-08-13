@@ -75,7 +75,7 @@ export class MockServerService {
    * The rest of the code exists to create or modify mock data
    * it is not important to understand the rest of the example (i.e. the rxjs part of it)
    */
-  backfillData(rowData): any {
+  backfillData(rowData: any[]): any {
     // the sample data has just name and code, we need to add in dummy figures
     rowData.forEach((dataItem) => {
 

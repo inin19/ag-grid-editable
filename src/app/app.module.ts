@@ -10,6 +10,7 @@ import { NumberFormatterComponent } from './custom-components/number-formatter.c
 import { NumericEditorComponent } from './custom-components/numeric-editor.component';
 import { RangeFilterComponent } from './custom-components/range-filter.component';
 import { RxjsByRowComponent } from './rxjs-component-example/rxjs-by-row.component';
+import { MyAgGridComponent } from './my-ag-grid/my-ag-grid.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RxjsByRowComponent } from './rxjs-component-example/rxjs-by-row.compone
     NumberFormatterComponent,
     NumericEditorComponent,
     RangeFilterComponent,
-    RxjsByRowComponent
+    RxjsByRowComponent,
+    MyAgGridComponent
   ],
   imports: [
     BrowserModule,

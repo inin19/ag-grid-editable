@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { GridOptions, ValueFormatterParams } from 'ag-grid-community';
 import { Observable } from 'rxjs';
 import { MockServerService } from './mock-server.service';
+import { AgGridAngular } from 'ag-grid-angular';
 
 @Component({
   selector: 'app-rxjs-by-row',
@@ -13,6 +14,9 @@ export class RxjsByRowComponent implements OnInit {
   initialRowDataLoad$: Observable<any[]>;
   rowDataUpdates$: Observable<any[]>;
 
+  @ViewChild('agGrid', { static: true }) agGrid: AgGridAngular;
+
+
   constructor(private mockServerService: MockServerService) {
     this.initialRowDataLoad$ = this.mockServerService.initialLoad();
     this.rowDataUpdates$ = this.mockServerService.byRowupdates();
@@ -22,6 +26,7 @@ export class RxjsByRowComponent implements OnInit {
     // this.initialRowDataLoad$.subscribe(data => {
     //   console.log(data);
     // });
+
 
     this.gridOptions = {
       enableRangeSelection: true,

@@ -12,6 +12,8 @@ import { RangeFilterComponent } from './custom-components/range-filter.component
 import { RxjsByRowComponent } from './rxjs-component-example/rxjs-by-row.component';
 import { MyAgGridComponent } from './my-ag-grid/my-ag-grid.component';
 
+import 'ag-grid-enterprise';
+
 @NgModule({
   declarations: [
     AppComponent,
